@@ -37,8 +37,13 @@ class TitleTextFieldCell: UITableViewCell {
     var rowModel: TitleTextFieldCellRowModel?
     
     override func awakeFromNib() {
-        self.titleLabel.font = .systemFont(ofSize: 16)
-        self.textFiled.font = .systemFont(ofSize: 14)
+        self.selectionStyle = .none
+        self.textFiled.delegate = self
+        self.titleLabel.font = .systemFont(ofSize: 18)
+        self.textFiled.font = .systemFont(ofSize: 16)
+        self.textFiled.layer.borderColor = UIColor.black.cgColor
+        self.textFiled.layer.borderWidth = 1
+        self.textFiled.layer.cornerRadius = 6
     }
     
 }

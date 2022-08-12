@@ -35,8 +35,9 @@ class BaseTableViewController: UIViewController {
     func setDefaultApp(){
         if #available(iOS 13.0, *) {
             let barAppearance = UINavigationBarAppearance()
-            barAppearance.backgroundColor = .white
+            barAppearance.backgroundColor = .red
             barAppearance.shadowColor = .clear
+            barAppearance.titleTextAttributes = [.foregroundColor:UIColor.white,.font: UIFont.systemFont(ofSize: 21)]
             navigationItem.standardAppearance = barAppearance
             navigationItem.scrollEdgeAppearance = barAppearance
         }
@@ -68,7 +69,7 @@ class BaseTableViewController: UIViewController {
         self.defaultTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         self.defaultTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.defaultTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -80.0).isActive = true
-        self.defaultTableView.backgroundColor = .red
+        self.defaultTableView.backgroundColor = .white
     }
     
     func creatBottomBarButton() -> [BottomBarButton] {
@@ -76,6 +77,8 @@ class BaseTableViewController: UIViewController {
     }
     
     func setBottomBar() {
+        
+        guard self.creatBottomBarButton().count > 0 else {return}
         
         let bottomBarStackView = StackBottomBarView(buttons: self.creatBottomBarButton())
         bottomBarStackView.translatesAutoresizingMaskIntoConstraints = false

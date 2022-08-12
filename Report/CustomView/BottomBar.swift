@@ -30,9 +30,9 @@ class StackBottomBarView: UIView {
     }
     
     func setupView(bottomBarButtons: [BottomBarButton] = []) {
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowRadius = 3
-        self.layer.shadowOpacity = 0.1
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        
         
         let stackView = createStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
