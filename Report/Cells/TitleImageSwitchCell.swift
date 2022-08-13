@@ -21,10 +21,13 @@ class TitleImageSwitchCellRowModel: CellRowModel {
     
     var switchAction: ((Bool)->())?
     
+    var errorID: String?
+    
     init(
         title: String? = "",
         done: Bool = false,
         isWho: UserMember = .custom,
+        errorID: String?,
         switchAction: ((Bool)->())?,
         cellDidSelect:((CellRowModel)->())?
     ){
@@ -32,6 +35,7 @@ class TitleImageSwitchCellRowModel: CellRowModel {
         self.title = title
         self.done = done
         self.isWho = isWho
+        self.errorID = errorID
         self.switchAction = switchAction
         self.cellDidSelect = cellDidSelect
     }

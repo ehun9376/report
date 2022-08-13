@@ -48,20 +48,22 @@ class AddJobViewController: BaseTableViewController {
             self.jobModel?.errorMessage = str
         }))
         
-        rowModels.append(TitleTextFieldCellRowModel(title: "申請人",
-                                                    textFieldEditAction: { str in
-            self.jobModel?.name = str
-        }))
-        
         rowModels.append(TitleTextFieldCellRowModel(title: "單位",
                                                     textFieldEditAction: { str in
             self.jobModel?.unit = str
         }))
         
+        rowModels.append(TitleTextFieldCellRowModel(title: "申請人",
+                                                    textFieldEditAction: { str in
+            self.jobModel?.name = str
+        }))
+
+        
         rowModels.append(TitleTextFieldCellRowModel(title: "聯絡電話",
                                                     textFieldEditAction: { str in
             self.jobModel?.phoneNumber = str
         }))
+        
         
         self.adapter?.updateTableViewData(rowModels: rowModels)
     }

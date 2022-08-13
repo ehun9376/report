@@ -17,6 +17,10 @@
 		3635016B28A65812009FF856 /* ReportUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3635016A28A65812009FF856 /* ReportUITestsLaunchTests.swift */; };
 		522638EE73EDAC3E7196EEDC /* Pods_ReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59E1CF9591D003C0E7FBF3D /* Pods_ReportTests.framework */; };
 		5E36DA6A48EF508584CD4662 /* Pods_Report_ReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF065A0D7324FCA4B75F2116 /* Pods_Report_ReportUITests.framework */; };
+		9413D2AB28A6AECF00257E07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D2AA28A6AECF00257E07 /* DetailViewController.swift */; };
+		9413D2AD28A6AF0200257E07 /* TitleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D2AC28A6AF0200257E07 /* TitleDetailCell.swift */; };
+		9413D2AF28A6B09F00257E07 /* TitleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9413D2AE28A6B09F00257E07 /* TitleDetailCell.xib */; };
+		9413D2B128A6B3AB00257E07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D2B028A6B3AB00257E07 /* HomeViewController.swift */; };
 		9454275828A673F500A66AAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9454275728A673F500A66AAB /* GoogleService-Info.plist */; };
 		9454275A28A674A100A66AAB /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454275928A674A100A66AAB /* BaseTableViewController.swift */; };
 		9454275C28A674A600A66AAB /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454275B28A674A600A66AAB /* TableViewAdapter.swift */; };
@@ -50,6 +54,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9413D2C428A6BF0A00257E07 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3635014428A65810009FF856 /* Report.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Report.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3635014728A65810009FF856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +85,10 @@
 		5B2F08633E55EE9B72D2A861 /* Pods-Report-ReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report-ReportUITests.debug.xcconfig"; path = "Target Support Files/Pods-Report-ReportUITests/Pods-Report-ReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		62AA716D56667F42DCA23B9E /* Pods_Report.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Report.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A308D142AD9D444C0DB96 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
+		9413D2AA28A6AECF00257E07 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9413D2AC28A6AF0200257E07 /* TitleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDetailCell.swift; sourceTree = "<group>"; };
+		9413D2AE28A6B09F00257E07 /* TitleDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDetailCell.xib; sourceTree = "<group>"; };
+		9413D2B028A6B3AB00257E07 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9454275728A673F500A66AAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9454275928A674A100A66AAB /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		9454275B28A674A600A66AAB /* TableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
@@ -199,7 +220,9 @@
 		9454276628A6781300A66AAB /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				9413D2B028A6B3AB00257E07 /* HomeViewController.swift */,
 				3635014B28A65810009FF856 /* JobListViewController.swift */,
+				9413D2AA28A6AECF00257E07 /* DetailViewController.swift */,
 				9454276828A6787900A66AAB /* AddJobViewController.swift */,
 			);
 			path = Pages;
@@ -217,6 +240,8 @@
 		9454276A28A6788700A66AAB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9413D2AC28A6AF0200257E07 /* TitleDetailCell.swift */,
+				9413D2AE28A6B09F00257E07 /* TitleDetailCell.xib */,
 				9454276B28A6789700A66AAB /* TitleImageSwitchCell.swift */,
 				9454277128A678B900A66AAB /* TitleImageSwitchCell.xib */,
 				9454276D28A678A700A66AAB /* TitleTextFieldCell.swift */,
@@ -271,6 +296,7 @@
 				3635014128A65810009FF856 /* Frameworks */,
 				3635014228A65810009FF856 /* Resources */,
 				05E912FB5073301970ED132B /* [CP] Embed Pods Frameworks */,
+				9413D2C428A6BF0A00257E07 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -371,6 +397,7 @@
 				3635015428A65811009FF856 /* LaunchScreen.storyboard in Resources */,
 				9454277228A678B900A66AAB /* TitleImageSwitchCell.xib in Resources */,
 				9454275828A673F500A66AAB /* GoogleService-Info.plist in Resources */,
+				9413D2AF28A6B09F00257E07 /* TitleDetailCell.xib in Resources */,
 				9454277028A678B100A66AAB /* TitleTextFieldCell.xib in Resources */,
 				3635015128A65811009FF856 /* Assets.xcassets in Resources */,
 			);
@@ -511,8 +538,11 @@
 				9454275C28A674A600A66AAB /* TableViewAdapter.swift in Sources */,
 				9454276E28A678A700A66AAB /* TitleTextFieldCell.swift in Sources */,
 				9454276428A6766A00A66AAB /* BottomBarButton.swift in Sources */,
+				9413D2B128A6B3AB00257E07 /* HomeViewController.swift in Sources */,
 				9454276C28A6789700A66AAB /* TitleImageSwitchCell.swift in Sources */,
+				9413D2AD28A6AF0200257E07 /* TitleDetailCell.swift in Sources */,
 				3635014A28A65810009FF856 /* SceneDelegate.swift in Sources */,
+				9413D2AB28A6AECF00257E07 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

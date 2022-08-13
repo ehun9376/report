@@ -27,9 +27,12 @@ class CellRowModel: CellRowModelBase {
     weak var tableView: UITableView?
     
     func updateCellView() {
-        if let tableView = tableView {
-            tableView.reloadRows(at: [self.indexPath ?? IndexPath()], with: .none)
+        DispatchQueue.main.async {
+            if let tableView = self.tableView {
+                tableView.reloadRows(at: [self.indexPath ?? IndexPath()], with: .none)
+            }
         }
+
     }
 }
 

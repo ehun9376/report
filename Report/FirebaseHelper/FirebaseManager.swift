@@ -51,6 +51,10 @@ class FirebaseManager: NSObject {
                 if let handler = handler{
                     handler(jsonModels)
                 }
+            } else {
+                if let handler = handler{
+                    handler([])
+                }
             }
         })
     }
@@ -73,6 +77,47 @@ class FirebaseManager: NSObject {
         })
         
     }
+    
+    func updateJobStatus(child: FirebaseChild = .jobList,model: JobModel?,handler:((Error?,String)->())?){
+        self.ref = Database.database().reference(fromURL: self.url)
+        self.ref?.child(child.description).child(model?.jobModelID ?? "").setValue(model?.getParam(),
+                                                                 withCompletionBlock: { error, re in
+            
+            if let handler = handler {
+                if let error = error {
+                    handler(error,"")
+                } else {
+                    handler(nil, "更新完成")
+                }
+            }
+        })
+    }
+    
+    func addFireBaseObserver(child: FirebaseChild = .jobList,handler:(([String:Any])->())?){
+        self.ref = Database.database().reference(fromURL: self.url)
+        self.ref?.child(child.description).observe(.childChanged, with: { snapShot in
+            if let jsonModel = snapShot.value as? [String:Any] {
+                if let handler = handler{
+                    handler(jsonModel)
+                }
+            }
+        })
+    }
+    func clearChildAll(child: FirebaseChild = .jobList,handler:((Error?,String)->())?){
+        self.ref = Database.database().reference(fromURL: self.url)
+        self.ref?.child(child.description).setValue([:],
+                                                    withCompletionBlock: { error, re in
+            
+            if let handler = handler {
+                if let error = error {
+                    handler(error,"")
+                } else {
+                    handler(nil, "刪除完成")
+                }
+            }
+        })
+    }
+    
     
     
 }
