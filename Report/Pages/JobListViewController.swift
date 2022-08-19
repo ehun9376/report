@@ -24,7 +24,14 @@ class JobListViewController: BaseTableViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        self.title = "申請清單"
+        
+        switch self.userMember {
+        case .custom:
+            self.title = "申請清單"
+        case .manager:
+            self.title = "報修清單"
+        }
+        
         self.regisCell(cellIDs: [
             "TitleImageSwitchCell"
         ])
@@ -131,28 +138,45 @@ class JobListViewController: BaseTableViewController {
             return lModel.date ?? "" > rModel.date ?? ""
         }
         for model in sortModels {
+            var doneStr = "待處理"
+            var doneColor: UIColor = .black
+            switch model.done {
+            case 0 :
+                doneStr = "待處理"
+//                doneColor = .red
+            case 1:
+                doneStr = "處理中"
+//                doneColor = .red
+            case 2:
+                doneStr = "已完成"
+//                doneColor = .green
+            default:
+                doneStr = "待處理"
+            }
             rowModels.append(TitleImageSwitchCellRowModel(title: model.title,
-                                                          done: model.done,
+                                                          doneMessage: doneStr,
+                                                          doneTextColor: doneColor,
                                                           isWho: self.userMember,
                                                           errorID: model.jobModelID,
-                                                          switchAction: { [weak self] isDone in
-            //TODO: - 抓到那個ID的事件然後更新
-                let model: JobModel = model
-                model.done = isDone
-                FirebaseManager.shared.updateJobStatus(child: .jobList, model: model, handler: {
-                    [weak self] (error,message) in
-                    if let error = error {
-                        self?.showSingleAlert(title: "出錯囉", message: error.localizedDescription, confirmTitle: "確定", confirmAction: nil)
-                    } else {
-                        self?.showSingleAlert(title: "提示", message: message, confirmTitle: "確定", confirmAction: nil)
-                    }
-                    
-                })
-            },
+//                                                          switchAction: { [weak self] isDone in
+//            //TODO: - 抓到那個ID的事件然後更新
+//                let model: JobModel = model
+//                model.done = isDone
+//                FirebaseManager.shared.updateJobStatus(child: .jobList, model: model, handler: {
+//                    [weak self] (error,message) in
+//                    if let error = error {
+//                        self?.showSingleAlert(title: "出錯囉", message: error.localizedDescription, confirmTitle: "確定", confirmAction: nil)
+//                    } else {
+//                        self?.showSingleAlert(title: "提示", message: message, confirmTitle: "確定", confirmAction: nil)
+//                    }
+//
+//                })
+//            },
                                                           cellDidSelect: { [weak self] _  in
                 self?.view.endEditing(true)
                 let vc = DetailViewController()
                 vc.jobModel = model
+                vc.fromWho = self?.userMember ?? .custom
                 self?.navigationController?.pushViewController(vc, animated: true)
             }))
 

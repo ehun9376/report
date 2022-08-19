@@ -13,12 +13,16 @@ class TitleDetailCellRowModel: CellRowModel {
     }
     var title: String?
     var detail: String?
+    
     init(
         title: String?,
-        detail: String?
+        detail: String?,
+        cellAction: ((CellRowModel)->())? = nil
     ){
+        super.init()
         self.title = title
         self.detail = detail
+        self.cellDidSelect = cellAction
     }
 }
 class TitleDetailCell: UITableViewCell {
@@ -28,6 +32,7 @@ class TitleDetailCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     
     override func awakeFromNib() {
+        self.selectionStyle = .none
         self.titleLabel.font = .systemFont(ofSize: 18)
         self.titleLabel.numberOfLines = 0
         self.titleLabel.lineBreakMode = .byWordWrapping

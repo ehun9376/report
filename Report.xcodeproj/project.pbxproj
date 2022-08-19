@@ -18,8 +18,6 @@
 		522638EE73EDAC3E7196EEDC /* Pods_ReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59E1CF9591D003C0E7FBF3D /* Pods_ReportTests.framework */; };
 		5E36DA6A48EF508584CD4662 /* Pods_Report_ReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF065A0D7324FCA4B75F2116 /* Pods_Report_ReportUITests.framework */; };
 		9413D2AB28A6AECF00257E07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D2AA28A6AECF00257E07 /* DetailViewController.swift */; };
-		9413D2AD28A6AF0200257E07 /* TitleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D2AC28A6AF0200257E07 /* TitleDetailCell.swift */; };
-		9413D2AF28A6B09F00257E07 /* TitleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9413D2AE28A6B09F00257E07 /* TitleDetailCell.xib */; };
 		9413D2B128A6B3AB00257E07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D2B028A6B3AB00257E07 /* HomeViewController.swift */; };
 		9454275828A673F500A66AAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9454275728A673F500A66AAB /* GoogleService-Info.plist */; };
 		9454275A28A674A100A66AAB /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454275928A674A100A66AAB /* BaseTableViewController.swift */; };
@@ -34,6 +32,10 @@
 		9454277228A678B900A66AAB /* TitleImageSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9454277128A678B900A66AAB /* TitleImageSwitchCell.xib */; };
 		9454277628A678E500A66AAB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454277528A678E500A66AAB /* FirebaseManager.swift */; };
 		9454277928A6800B00A66AAB /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454277828A6800B00A66AAB /* JobModel.swift */; };
+		94A0FA2528AFC0070007FAFA /* TitleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A0FA2328AFC0070007FAFA /* TitleDetailCell.xib */; };
+		94A0FA2628AFC0070007FAFA /* TitleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FA2428AFC0070007FAFA /* TitleDetailCell.swift */; };
+		94A0FA2828AFEEE80007FAFA /* ErrorTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FA2728AFEEE80007FAFA /* ErrorTypePicker.swift */; };
+		94A0FA2A28B003380007FAFA /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0FA2928B003380007FAFA /* DatePickerView.swift */; };
 		F159F8F0DB81C42CA2BE5B13 /* Pods_Report.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AA716D56667F42DCA23B9E /* Pods_Report.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +88,6 @@
 		62AA716D56667F42DCA23B9E /* Pods_Report.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Report.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A308D142AD9D444C0DB96 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
 		9413D2AA28A6AECF00257E07 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		9413D2AC28A6AF0200257E07 /* TitleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDetailCell.swift; sourceTree = "<group>"; };
-		9413D2AE28A6B09F00257E07 /* TitleDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDetailCell.xib; sourceTree = "<group>"; };
 		9413D2B028A6B3AB00257E07 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9454275728A673F500A66AAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9454275928A674A100A66AAB /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +102,10 @@
 		9454277128A678B900A66AAB /* TitleImageSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleImageSwitchCell.xib; sourceTree = "<group>"; };
 		9454277528A678E500A66AAB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		9454277828A6800B00A66AAB /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		94A0FA2328AFC0070007FAFA /* TitleDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleDetailCell.xib; sourceTree = "<group>"; };
+		94A0FA2428AFC0070007FAFA /* TitleDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleDetailCell.swift; sourceTree = "<group>"; };
+		94A0FA2728AFEEE80007FAFA /* ErrorTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypePicker.swift; sourceTree = "<group>"; };
+		94A0FA2928B003380007FAFA /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		9D11E2D3FDFBE294BC694CE1 /* Pods-Report-ReportUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report-ReportUITests.release.xcconfig"; path = "Target Support Files/Pods-Report-ReportUITests/Pods-Report-ReportUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A60410C498C946638B0374F4 /* Pods-Report.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.debug.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.debug.xcconfig"; sourceTree = "<group>"; };
 		DF065A0D7324FCA4B75F2116 /* Pods_Report_ReportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Report_ReportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				9454276228A6766A00A66AAB /* BottomBar.swift */,
+				94A0FA2728AFEEE80007FAFA /* ErrorTypePicker.swift */,
+				94A0FA2928B003380007FAFA /* DatePickerView.swift */,
 				9454276128A6766A00A66AAB /* BottomBarButton.swift */,
 			);
 			path = CustomView;
@@ -240,8 +246,8 @@
 		9454276A28A6788700A66AAB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9413D2AC28A6AF0200257E07 /* TitleDetailCell.swift */,
-				9413D2AE28A6B09F00257E07 /* TitleDetailCell.xib */,
+				94A0FA2428AFC0070007FAFA /* TitleDetailCell.swift */,
+				94A0FA2328AFC0070007FAFA /* TitleDetailCell.xib */,
 				9454276B28A6789700A66AAB /* TitleImageSwitchCell.swift */,
 				9454277128A678B900A66AAB /* TitleImageSwitchCell.xib */,
 				9454276D28A678A700A66AAB /* TitleTextFieldCell.swift */,
@@ -394,10 +400,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A0FA2528AFC0070007FAFA /* TitleDetailCell.xib in Resources */,
 				3635015428A65811009FF856 /* LaunchScreen.storyboard in Resources */,
 				9454277228A678B900A66AAB /* TitleImageSwitchCell.xib in Resources */,
 				9454275828A673F500A66AAB /* GoogleService-Info.plist in Resources */,
-				9413D2AF28A6B09F00257E07 /* TitleDetailCell.xib in Resources */,
 				9454277028A678B100A66AAB /* TitleTextFieldCell.xib in Resources */,
 				3635015128A65811009FF856 /* Assets.xcassets in Resources */,
 			);
@@ -533,14 +539,16 @@
 				3635014C28A65810009FF856 /* JobListViewController.swift in Sources */,
 				9454277928A6800B00A66AAB /* JobModel.swift in Sources */,
 				3635014828A65810009FF856 /* AppDelegate.swift in Sources */,
+				94A0FA2828AFEEE80007FAFA /* ErrorTypePicker.swift in Sources */,
 				9454275A28A674A100A66AAB /* BaseTableViewController.swift in Sources */,
 				9454276328A6766A00A66AAB /* BottomBar.swift in Sources */,
 				9454275C28A674A600A66AAB /* TableViewAdapter.swift in Sources */,
 				9454276E28A678A700A66AAB /* TitleTextFieldCell.swift in Sources */,
 				9454276428A6766A00A66AAB /* BottomBarButton.swift in Sources */,
+				94A0FA2A28B003380007FAFA /* DatePickerView.swift in Sources */,
+				94A0FA2628AFC0070007FAFA /* TitleDetailCell.swift in Sources */,
 				9413D2B128A6B3AB00257E07 /* HomeViewController.swift in Sources */,
 				9454276C28A6789700A66AAB /* TitleImageSwitchCell.swift in Sources */,
-				9413D2AD28A6AF0200257E07 /* TitleDetailCell.swift in Sources */,
 				3635014A28A65810009FF856 /* SceneDelegate.swift in Sources */,
 				9413D2AB28A6AECF00257E07 /* DetailViewController.swift in Sources */,
 			);

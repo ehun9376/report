@@ -3,4 +3,54 @@
    uuid = "CEAF9481-4711-4D93-8228-36DE08E1DC29"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "270783F9-4C6E-4F5F-91B4-F3E55BA83BAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Report/CustomView/DatePickerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "buttonAction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "270783F9-4C6E-4F5F-91B4-F3E55BA83BAA - 44b8c3c41a85e312"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Report.DatePickerView.buttonAction() -&gt; ()"
+                  moduleName = "Report"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yihuang/Desktop/report/Report/CustomView/DatePickerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "270783F9-4C6E-4F5F-91B4-F3E55BA83BAA - 44b8c3c41a85e312"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Report.DatePickerView.buttonAction() -&gt; ()"
+                  moduleName = "Report"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yihuang/Desktop/report/Report/CustomView/DatePickerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

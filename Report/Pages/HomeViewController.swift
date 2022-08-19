@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         
         let customButton = UIButton()
         customButton.translatesAutoresizingMaskIntoConstraints = false
-        customButton.setTitle("我是顧客", for: .normal)
+        customButton.setTitle("客戶端", for: .normal)
         customButton.setTitleColor(.white, for: .normal)
         customButton.backgroundColor = .darkGray
         customButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
         
         let managerButton = UIButton()
         managerButton.translatesAutoresizingMaskIntoConstraints = false
-        managerButton.setTitle("我是管理員", for: .normal)
+        managerButton.setTitle("管理端", for: .normal)
         managerButton.setTitleColor(.black, for: .normal)
         managerButton.backgroundColor = .systemGray
         managerButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -61,18 +61,21 @@ class HomeViewController: UIViewController {
     @objc func buttonAction(_ button:UIButton){
         var member: UserMember = .custom
         switch button.titleLabel?.text {
-        case "我是顧客":
+        case "客戶端":
             member = .custom
-        case "我是管理員":
+        case "管理端":
             member = .manager
         default:
             return
         }
-        let vc = JobListViewController()
-        vc.userMember = member
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.modalPresentationStyle = .fullScreen
-        self.present(navigationController, animated: true)
+            let vc = JobListViewController()
+            vc.userMember = member
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true)
+        
+        
+
         
         
     }

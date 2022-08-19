@@ -16,14 +16,26 @@ class TitleTextFieldCellRowModel: CellRowModel {
     
     var title: String? = ""
     
-    var textFieldEditAction: ((String)->())?
+    var textFieldText: String?
+    
+    var textFieldCanEdit: Bool = true
+    
+    var textFieldTouchAction: ((CellRowModel)->())? = nil
+    
+    var textFieldEditAction: ((String)->())? = nil
     
     init(
         title: String? = "",
-        textFieldEditAction: ((String)->())?
+        textFieldText: String? = nil,
+        textFieldCanEdit: Bool = true,
+        textFieldTouchAction: ((CellRowModel)->())? = nil,
+        textFieldEditAction: ((String)->())? = nil
     ){
         super.init()
         self.title = title
+        self.textFieldText = textFieldText
+        self.textFieldCanEdit = textFieldCanEdit
+        self.cellDidSelect = textFieldTouchAction
         self.textFieldEditAction = textFieldEditAction
     }
     
@@ -59,5 +71,11 @@ extension TitleTextFieldCell: CellViewBase {
         guard let rowModel = rowModel as? TitleTextFieldCellRowModel else { return }
         self.rowModel = rowModel
         self.titleLabel.text = rowModel.title
+        self.textFiled.isEnabled = rowModel.textFieldCanEdit
+        if let text = rowModel.textFieldText {
+            self.textFiled.text = text
+        } else {
+            self.textFiled.text = nil
+        }
     }
 }
