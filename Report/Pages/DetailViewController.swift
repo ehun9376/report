@@ -156,7 +156,7 @@ class DetailViewController: BaseTableViewController {
                                                         textFieldCanEdit: false,
                                                         textFieldTouchAction: { [weak self] _ in
                 guard let self = self else { return }
-                self.view.endEditing(true)
+//                self.view.endEditing(true)
                 
                 let pickerView = DatePickerView()
                 pickerView.confirmAction = { returnDate in
@@ -178,6 +178,13 @@ class DetailViewController: BaseTableViewController {
         self.adapter?.updateTableViewData(rowModels: rowModels)
 
     }
+    
+    func showNameError(){
+        self.showSingleAlert(title: "提示",
+                             message: "姓名或日期沒有寫喔" ,
+                             confirmTitle: "確定",
+                             confirmAction: nil)
+    }
     override func creatBottomBarButton() -> [BottomBarButton] {
         switch self.fromWho {
         case .custom:
@@ -186,13 +193,17 @@ class DetailViewController: BaseTableViewController {
              return [
 
                 .update(action: {
-                    guard let _ = self.jobModel?.workTime , let _ = self.jobModel?.workingName else {
-                        self.showSingleAlert(title: "提示",
-                                             message: "姓名或日期沒有寫喔" ,
-                                             confirmTitle: "確定",
-                                             confirmAction: nil)
+                    if let workTime = self.jobModel?.workTime , let workingName = self.jobModel?.workingName{
+                        if workTime == "" || workingName == "" {
+                            self.showNameError()
+                            return
+                        }
+                    } else {
+                        self.showNameError()
                         return
                     }
+
+                    
                     self.jobModel?.done = 2
 
                     FirebaseManager.shared.updateJobStatus(model: self.jobModel, handler: { error, message in

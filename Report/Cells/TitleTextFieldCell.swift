@@ -56,10 +56,18 @@ class TitleTextFieldCell: UITableViewCell {
         self.textFiled.layer.borderColor = UIColor.black.cgColor
         self.textFiled.layer.borderWidth = 1
         self.textFiled.layer.cornerRadius = 6
+        self.textFiled.returnKeyType = .done
     }
     
 }
 extension TitleTextFieldCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+        if let rowModel = rowModel, let action = rowModel.textFieldEditAction {
+            action(textField.text ?? "")
+        }
+        return true
+    }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let rowModel = rowModel, let action = rowModel.textFieldEditAction {
             action(textField.text ?? "")
