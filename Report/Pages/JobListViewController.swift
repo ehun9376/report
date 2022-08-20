@@ -37,7 +37,7 @@ class JobListViewController: BaseTableViewController {
         ])
         self.getJobListFromFirebase()
 
-            self.setupNavigationBar()
+        self.setupNavigationBar()
         
        
         self.addRefresh()
@@ -85,10 +85,6 @@ class JobListViewController: BaseTableViewController {
     
     @objc func rightBarItemActionCompose() {
         let controller = UIAlertController(title: "", message: "動作選單", preferredStyle: .actionSheet)
-        
-        let sendout = UIAlertAction(title: "匯出", style: .default) { _ in
-            
-        }
         
         let clearAll = UIAlertAction(title: "清除所有資料", style: .default) { _ in
             
@@ -175,6 +171,9 @@ class JobListViewController: BaseTableViewController {
                                                           cellDidSelect: { [weak self] _  in
                 self?.view.endEditing(true)
                 let vc = DetailViewController()
+                vc.disApperAction = {
+                    self?.getJobListFromFirebase()
+                }
                 vc.jobModel = model
                 vc.fromWho = self?.userMember ?? .custom
                 self?.navigationController?.pushViewController(vc, animated: true)

@@ -71,7 +71,7 @@ class AddJobViewController: BaseTableViewController {
             self.view.endEditing(true)
             
             let pickerView = ErrorTypePicker()
-            pickerView.typeArray = ["1","2","3"]
+            pickerView.typeArray = ["軍網","民網","專網","電話"]
             pickerView.confirmAction = { [weak self] returnType in
                 guard let self = self else { return }
                 self.jobModel?.errorClass = returnType
