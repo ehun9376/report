@@ -120,6 +120,14 @@ class AddJobViewController: BaseTableViewController {
         return [
             .apply(action: {
                 self.view.endEditing(true)
+                if self.jobModel?.title == nil || self.jobModel?.title ?? "" == "" {
+                    self.showSingleAlert(title: "提示",
+                                         message: "主旨一定要寫喔",
+                                         confirmTitle: "確定",
+                                         confirmAction: {
+                    })
+                    return
+                }
                 FirebaseManager.shared.updateJobModel(child: .jobList, model: self.jobModel ?? nil) { error, applyID in
                     if let error = error {
                         self.showAlert(title: "出錯囉",
